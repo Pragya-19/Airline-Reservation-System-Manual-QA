@@ -87,6 +87,8 @@ Manage Booking
       ↓
 Cancellation / Refund
 
+```markdown
+
 ##🧩 Testing Types Covered
 
 This project includes:
