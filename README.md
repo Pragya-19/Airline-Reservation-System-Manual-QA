@@ -89,8 +89,8 @@ Cancellation / Refund
 
 ```
 
-##🧩 Testing Types Covered
-
+##🧩 **Testing Types Covered
+**
 This project includes:
 
 Functional Testing
@@ -107,38 +107,58 @@ Sanity Testing
 Exploratory Testing
 Risk-Based Testing
 
-##📂 Repository Structure
+##📂 **Repository Structure**
 Airline-Reservation-System-Manual-QA/
 │
+
 ├── README.md
 │
+
 ├── docs/
 │   ├── Requirements.md
+
 │   ├── Test_Plan.md
+
 │   └── Domain_Overview.md
+
 │
 ├── test-design/
+
 │   ├── Test_Scenarios.xlsx
+
 │   ├── Test_Cases.xlsx
+
 │   └── RTM.xlsx
+
 │
 ├── defects/
+
 │   └── Defect_Report.xlsx
+
 │
 ├── exploratory-testing/
+
 │   └── Exploratory_Testing.md
+
 │
 ├── agile/
+
 │   ├── User_Stories.md
+
 │   └── Sprint_Backlog.md
+
 │
 ├── reports/
+
 │   └── Test_Summary_Report.md
+
 │
 └── evidence/
+
     └── screenshots/
     
-##🔍 Sample Test Scenarios
+    
+##🔍 **Sample Test Scenarios**
 
 Some of the key scenarios covered in this project include:
 
@@ -162,7 +182,7 @@ Verify correct passenger and itinerary details are stored in the booking
 Verify cancellation workflow
 Verify refund workflow and booking status updates
 
-##💳 High-Risk Business Scenarios
+##💳 **High-Risk Business Scenarios**
 
 Special focus is given to high-risk booking and payment scenarios.
 
@@ -185,7 +205,7 @@ Reversal/refund behavior
 
 This type of issue can be considered a high-severity business and integration defect because a customer may be charged without receiving a confirmed booking.
 
-##🔁 Idempotency Testing
+##🔁 **Idempotency Testing**
 
 Payment APIs and booking workflows should prevent duplicate transactions when the same request is retried.
 
@@ -207,7 +227,7 @@ Idempotency validation
       ↓
 Only one payment / one booking created
 
-##🐞 Defect Reporting
+##🐞 **Defect Reporting**
 
 Defects are documented with the following details:
 
@@ -225,7 +245,7 @@ Test Data
 Screenshot / Evidence
 Status
 
-##⚖️ Severity vs Priority
+##⚖️ **Severity vs Priority**
 
 Severity refers to the impact of the defect on the system or business.
 
@@ -237,7 +257,7 @@ Payment deducted but booking not created
 Severity: High
 Priority: High
 
-##🔗 Requirement Traceability
+##🔗 **Requirement Traceability**
 
 A Requirement Traceability Matrix (RTM) is maintained to map:
 
@@ -253,7 +273,7 @@ Defect
 
 This helps ensure that all defined requirements are covered by testing.
 
-##🔎 Exploratory Testing
+##🔎** Exploratory Testing**
 
 Exploratory testing is performed for areas such as:
 
@@ -268,7 +288,7 @@ Unexpected user actions
 
 Exploratory testing combines learning, test design, execution, and investigation during the same testing session.
 
-##🏃 Agile QA Simulation
+##🏃** Agile QA Simulation**
 
 The project also includes simulated Agile QA activities such as:
 
@@ -293,7 +313,7 @@ Given valid search details
 When the user searches for a flight
 Then matching available flights should be displayed.
 
-##📊 Risk-Based Testing Approach
+##📊** Risk-Based Testing Approach**
 
 When execution time is limited, testing is prioritized in this order:
 
@@ -307,7 +327,7 @@ High-risk integrations
 Regression around impacted areas
 Lower-risk and cosmetic scenarios
 
-##🛠️ Tools Used
+##🛠️ **Tools Used**
 Manual Testing
 Microsoft Excel / Spreadsheet-based test documentation
 Git
@@ -315,7 +335,7 @@ GitHub
 Browser Developer Tools
 Screenshots and test evidence
 
-##🧠 Domain Concepts Covered
+##🧠** Domain Concepts Covered**
 
 Key airline domain terms covered in this project include:
 
@@ -334,7 +354,7 @@ Refund
 Payment Reconciliation
 Idempotency
 
-##📈 Future Enhancements
+##📈** Future Enhancements**
 
 Future enhancements may include:
 
@@ -345,13 +365,13 @@ GitHub Actions CI/CD integration
 SQL-based backend validation
 Basic AI testing for an airline support chatbot
 
-##👩‍💻 About This Project
+##👩‍💻 **About This Project**
 
 This project was created as part of my QA upskilling and portfolio development to demonstrate practical manual testing skills, domain understanding, test design techniques, defect analysis, and end-to-end quality assurance thinking.
 
 It is intended to showcase my current hands-on QA capabilities and structured testing approach.
 
-📌 Disclaimer
+📌 **Disclaimer**
 
 This is an independent educational and portfolio project.
 
