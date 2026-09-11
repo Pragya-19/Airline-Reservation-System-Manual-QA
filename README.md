@@ -1,378 +1,329 @@
+✈️ Airline Reservation System — Manual QA Portfolio Project
 
-# Airline Reservation System – Manual QA Portfolio Project
+<p align="center">
+  <img src="https://img.shields.io/badge/Testing-Manual%20QA-2563EB?style=for-the-badge" alt="Manual QA"/>
+  <img src="https://img.shields.io/badge/Domain-Airline%20%2F%20Travel-0F766E?style=for-the-badge" alt="Airline Domain"/>
+  <img src="https://img.shields.io/badge/Test%20Cases-39-7C3AED?style=for-the-badge" alt="39 Test Cases"/>
+  <img src="https://img.shields.io/badge/Project-Closed-15803D?style=for-the-badge" alt="Project Closed"/>
+</p>
 
-## 📌 Project Overview
+<p align="center">
+  <strong>End-to-end manual QA project covering flight search, fare validation, passenger rules, payments, booking/PNR, cancellation, refund, traceability, defects, and test closure.</strong>
+</p>
 
-This is an independent **Manual QA portfolio project** based on an airline/travel reservation workflow.
+📌 Project Overview
 
-The purpose of this project is to demonstrate end-to-end software testing activities for a booking system, including requirement analysis, test planning, test design, execution approach, defect reporting, traceability, exploratory testing, Agile artifacts, and test summary reporting.
+This repository presents an independent Manual QA portfolio project for an airline/travel reservation workflow.
 
-The project focuses on the functional workflow of an airline reservation system from flight search through booking, payment, PNR generation, and cancellation/refund scenarios.
+The project demonstrates practical QA execution across:
 
----
+Requirement analysis
 
-## 🎯 Project Objectives
+Test planning
 
-The objectives of this project are to:
+Test scenario and test case design
 
-- Understand the airline/travel reservation domain
-- Analyze functional requirements
-- Design positive, negative, boundary, and business-rule test scenarios
-- Create detailed test cases
-- Validate end-to-end booking workflows
-- Identify and document defects
-- Maintain requirement traceability
-- Apply risk-based testing
-- Practice exploratory testing
-- Simulate Agile QA activities
-- Prepare test summary and execution reports
+Functional, negative, boundary and business-rule testing
 
----
+Risk-based testing
 
-## 🧪 System Under Test
+End-to-end workflow validation
 
-**System:** Travel/Airline Reservation Demo Application  
-**Project Type:** Independent QA Portfolio / Testing Simulation  
-**Domain:** Airline / Travel Reservation
+Defect reporting and retesting
 
-The application is used to simulate typical airline booking workflows for testing purposes.
+Requirement Traceability Matrix (RTM)
 
-> Note: This is a personal QA portfolio project created for learning and demonstration purposes. It is not affiliated with any airline or travel company.
+Exploratory testing
 
----
+Test summary and project closure
 
-## ✈️ Functional Modules Covered
+The System Under Test (SUT) is a public travel reservation demo application used only for testing and learning purposes.
 
-The project covers the following modules:
+📊 Project Snapshot
 
-1. Flight Search
-2. Flight Availability
-3. Fare Selection and Validation
-4. Passenger Details
-5. Ancillary Services
-6. Payment
-7. Booking Confirmation
-8. PNR Generation
-9. Ticketing
-10. Manage Booking
-11. Cancellation
-12. Refund
+Metric
 
----
+Result
 
-## 🔄 Airline Booking Flow
+Total Test Cases
 
-```text
+39
+
+Passed
+
+29
+
+Failed
+
+4
+
+Blocked
+
+4
+
+Not Executed
+
+2
+
+Domain
+
+Airline / Travel Reservation
+
+Environment
+
+Web Demo Application, Admin Portal, Stripe Sandbox
+
+Project Status
+
+Closed with documented defects and test limitations
+
+Execution integrity: Scenarios that could not be reproduced safely or deterministically were marked Blocked or Not Executed rather than being reported as passed.
+
+🧭 End-to-End Booking Flow
+
+flowchart LR
+    A[Flight Search] --> B[Availability]
+    B --> C[Fare Selection]
+    C --> D[Passenger Details]
+    D --> E[Fare Review]
+    E --> F[Payment]
+    F --> G[Booking Confirmation]
+    G --> H[Booking / PNR Validation]
+    H --> I[Manage Booking]
+    I --> J[Cancellation / Refund]
+
+    F -. High Risk .-> K[Duplicate Payment Protection]
+    G -. Integration Risk .-> L[Supplier / PNR Failure Handling]
+    J -. Business Risk .-> M[Refund Validation]
+
+✅ Functional Coverage
+
+Module
+
+Coverage Highlights
+
 Flight Search
-      ↓
-Availability
-      ↓
-Fare Selection
-      ↓
-Passenger Details
-      ↓
-Ancillary Services
-      ↓
-Fare Review
-      ↓
+
+Valid search, same origin/destination, mandatory fields, past date, no-result behavior
+
+Fare
+
+Fare visibility, tax/fee calculation, passenger-count recalculation, fare consistency
+
+Passenger
+
+Mandatory fields, name boundary, duplicate passenger data, child/infant handling
+
 Payment
-      ↓
-Booking Confirmation
-      ↓
-PNR Generation
-      ↓
-Ticket Issuance
-      ↓
-Manage Booking
-      ↓
-Cancellation / Refund
 
-```
+Successful payment, failed/cancelled payment, duplicate payment/booking protection, amount consistency
 
-##🧩 **Testing Types Covered
-**
-This project includes:
+Booking / PNR
 
-Functional Testing
-Positive Testing
-Negative Testing
-Boundary Value Testing
-Validation Testing
-UI Testing
-Business Rule Testing
-Regression Testing
+Booking creation, passenger/itinerary/fare validation, booking retrieval
+
+Cancellation
+
+Eligible cancellation, cancellation state handling, repeat-cancellation prevention
+
+Refund
+
+Refund amount validation and refund-state observations
+
+End-to-End
+
+Search → booking → payment → confirmation and fare consistency
+
+🧪 Test Techniques Applied
+
+<p>
+  <img src="https://img.shields.io/badge/Positive-Testing-0EA5E9" alt="Positive Testing"/>
+  <img src="https://img.shields.io/badge/Negative-Testing-E11D48" alt="Negative Testing"/>
+  <img src="https://img.shields.io/badge/Boundary-Value-F59E0B" alt="Boundary Testing"/>
+  <img src="https://img.shields.io/badge/Regression-Testing-8B5CF6" alt="Regression Testing"/>
+  <img src="https://img.shields.io/badge/Risk--Based-Testing-DC2626" alt="Risk Based Testing"/>
+  <img src="https://img.shields.io/badge/End--to--End-Testing-059669" alt="End to End Testing"/>
+</p>
+
+Additional techniques include:
+
+Business-rule validation
+
+Mandatory-field validation
+
 Retesting
-Smoke Testing
-Sanity Testing
-Exploratory Testing
-Risk-Based Testing
 
-##📂 **Repository Structure**
+Exploratory testing
+
+Integration-focused scenario design
+
+Requirement traceability
+
+🐞 Representative Defects Identified
+
+DEF-FS-001 — Same origin and destination accepted
+
+The application allowed a search with identical origin and destination instead of blocking the invalid route combination.
+
+DEF-PAX-001 — Excessive passenger name silently truncated
+
+The passenger name field accepted an excessively long value without validation and later truncated it on the invoice.
+
+DEF-PAX-002 — Child/infant combinations returned inconsistent availability
+
+Adult-only searches returned flights, while valid passenger combinations involving child/infant categories returned zero flights.
+
+DEF-CAN-001 — Cancellation blocked by supplier/PNR processing issue
+
+A cancellation request could not be completed because the Admin portal returned an invalid Sabre API response and the PNR remained unissued.
+
+A payment gateway limit issue was also observed earlier and successfully retested later using Stripe Sandbox.
+
+⚠️ High-Risk Areas Covered
+
+The project gives additional attention to business-critical scenarios such as:
+
+Payment amount versus final payable amount
+
+Duplicate payment prevention
+
+Duplicate booking prevention
+
+Payment timeout/retry risk
+
+Booking confirmation after payment
+
+Booking/PNR retrieval
+
+Supplier integration failure
+
+Cancellation state handling
+
+Refund calculation
+
+Fare consistency across the booking journey
+
+🔗 Requirement Traceability
+
+The RTM maps the complete QA chain:
+
+flowchart LR
+    R[Requirement] --> S[Test Scenario]
+    S --> T[Test Case]
+    T --> E[Execution Result]
+    E --> D[Defect / Observation]
+
+This provides visibility into:
+
+Requirement coverage
+
+Execution status
+
+Failed requirements
+
+Blocked scenarios
+
+Defect linkage
+
+Known coverage gaps
+
+📂 Repository Artifacts
+
 Airline-Reservation-System-Manual-QA/
 │
-
 ├── README.md
 │
-
 ├── docs/
 │   ├── Requirements.md
-
 │   ├── Test_Plan.md
-
 │   └── Domain_Overview.md
-
 │
 ├── test-design/
-
-│   ├── Test_Scenarios.xlsx
-
+│   ├── Test_Scenarios.md
 │   ├── Test_Cases.xlsx
-
 │   └── RTM.xlsx
-
 │
 ├── defects/
-
 │   └── Defect_Report.xlsx
-
 │
 ├── exploratory-testing/
-
 │   └── Exploratory_Testing.md
-
 │
 ├── agile/
-
 │   ├── User_Stories.md
-
 │   └── Sprint_Backlog.md
-
 │
 ├── reports/
-
-│   └── Test_Summary_Report.md
-
+│   ├── Test_Summary_Report.pdf
+│   └── Project_Closure_Report.pdf
 │
 └── evidence/
-
     └── screenshots/
-    
-    
-##🔍 **Sample Test Scenarios**
 
-Some of the key scenarios covered in this project include:
+🛠️ Tools Used
 
-Verify successful flight search using valid mandatory details
-Verify that origin and destination cannot be the same
-Verify behavior when destination is left blank
-Verify that a past departure date cannot be selected
-Verify that an infant cannot be selected without an accompanying adult
-Verify that search results match the selected origin and destination
-Verify fare calculation including taxes and additional charges
-Verify fare recalculation when passenger count changes
-Verify passenger mandatory-field validations
-Verify behavior for duplicate passenger details
-Verify successful payment
-Verify failed payment handling
-Verify duplicate payment prevention
-Verify payment timeout handling
-Verify successful booking generates a valid PNR
-Verify that PNR is not null or empty
-Verify correct passenger and itinerary details are stored in the booking
-Verify cancellation workflow
-Verify refund workflow and booking status updates
+Area
 
-##💳 **High-Risk Business Scenarios**
+Tools
 
-Special focus is given to high-risk booking and payment scenarios.
+Test Documentation
 
-Payment Successful but PNR Not Generated
+Microsoft Excel / Spreadsheet-based documentation
 
-This scenario validates what happens when payment succeeds but booking confirmation or PNR generation fails.
+Test Execution
 
-Key validations include:
+Web Browser, Browser Developer Tools
 
-Payment transaction status
-Booking creation status
-PNR generation status
-Duplicate booking prevention
-Duplicate payment prevention
-Transaction ID
-Booking ID
-Correlation/request ID
-Retry behavior
-Reversal/refund behavior
+Payment Validation
 
-This type of issue can be considered a high-severity business and integration defect because a customer may be charged without receiving a confirmed booking.
+Stripe Sandbox
 
-##🔁 **Idempotency Testing**
+Version Control
 
-Payment APIs and booking workflows should prevent duplicate transactions when the same request is retried.
+Git, GitHub
 
-Example risk:
+Evidence
 
-Payment request sent
-      ↓
-Response timeout
-      ↓
-User clicks Pay again
-      ↓
-Duplicate transaction risk
+Screenshots and execution documentation
 
-Expected behavior:
+✈️ Airline / Travel Domain Concepts Applied
 
-Same transaction/request
-      ↓
-Idempotency validation
-      ↓
-Only one payment / one booking created
+PNR · PAX · Itinerary · Flight Segment · Fare Class · GDS / Supplier Integration · Booking Confirmation · Payment Reconciliation · Cancellation · Refund · Idempotency
 
-##🐞 **Defect Reporting**
+🚧 Project Constraints
 
-Defects are documented with the following details:
+Because the project uses a public demo application, some conditions were outside the tester's control, including:
 
-Defect ID
-Defect Title
-Module
-Preconditions
-Steps to Reproduce
-Actual Result
-Expected Result
-Severity
-Priority
-Environment
-Test Data
-Screenshot / Evidence
-Status
+Third-party supplier behavior
 
-##⚖️ **Severity vs Priority**
+Demo-data availability
 
-Severity refers to the impact of the defect on the system or business.
+Sandbox-payment behavior
 
-Priority refers to how urgently the defect should be fixed.
+Inability to deterministically reproduce certain timeout/failure states
 
-Example:
+Limited control over supplier-side PNR issuance
 
-Payment deducted but booking not created
-Severity: High
-Priority: High
+These limitations are explicitly documented in the test cases, RTM, defect report, and test summary.
 
-##🔗 **Requirement Traceability**
+📈 Future Enhancements
 
-A Requirement Traceability Matrix (RTM) is maintained to map:
+Potential extensions:
 
-Requirement
-    ↓
-Test Scenario
-    ↓
-Test Case
-    ↓
-Execution Result
-    ↓
-Defect
+REST API testing with Postman
 
-This helps ensure that all defined requirements are covered by testing.
+API automation with Python + Pytest
 
-##🔎** Exploratory Testing**
+UI automation with Playwright + TypeScript
 
-Exploratory testing is performed for areas such as:
-
-Flight search combinations
-Passenger data variations
-Fare changes
-Payment retries
-Browser navigation
-Error handling
-Session behavior
-Unexpected user actions
-
-Exploratory testing combines learning, test design, execution, and investigation during the same testing session.
-
-##🏃** Agile QA Simulation**
-
-The project also includes simulated Agile QA activities such as:
-
-User stories
-Acceptance criteria
-Sprint backlog
-Defect triage
-Retesting
-Regression planning
-Sprint test execution
-Test summary reporting
-
-Example user story:
-
-As a traveler,
-I want to search for available flights
-so that I can select a suitable flight for my journey.
-
-Example acceptance criteria:
-
-Given valid search details
-When the user searches for a flight
-Then matching available flights should be displayed.
-
-##📊** Risk-Based Testing Approach**
-
-When execution time is limited, testing is prioritized in this order:
-
-Smoke / build verification
-Business-critical booking flows
-Payment
-Booking confirmation and PNR generation
-Recently changed functionality
-High-severity defect fixes
-High-risk integrations
-Regression around impacted areas
-Lower-risk and cosmetic scenarios
-
-##🛠️ **Tools Used**
-Manual Testing
-Microsoft Excel / Spreadsheet-based test documentation
-Git
-GitHub
-Browser Developer Tools
-Screenshots and test evidence
-
-##🧠** Domain Concepts Covered**
-
-Key airline domain terms covered in this project include:
-
-PNR – Passenger Name Record
-PAX – Passenger
-Itinerary
-Flight Segment
-Fare Class
-Ancillary Services
-SSR – Special Service Request
-GDS – Global Distribution System
-Booking Confirmation
-Ticketing
-Cancellation
-Refund
-Payment Reconciliation
-Idempotency
-
-##📈** Future Enhancements**
-
-Future enhancements may include:
-
-REST API testing using Postman
-API automation using Python and Pytest
-UI automation using Playwright with TypeScript
-GitHub Actions CI/CD integration
 SQL-based backend validation
-Basic AI testing for an airline support chatbot
 
-##👩‍💻 **About This Project**
+GitHub Actions CI/CD
 
-This project was created as part of my QA upskilling and portfolio development to demonstrate practical manual testing skills, domain understanding, test design techniques, defect analysis, and end-to-end quality assurance thinking.
+Basic AI/LLM testing for an airline support chatbot
 
-It is intended to showcase my current hands-on QA capabilities and structured testing approach.
+📄 Disclaimer
 
-📌 **Disclaimer**
+This is an independent educational and QA portfolio project.
 
-This is an independent educational and portfolio project.
-
-It is not associated with, endorsed by, or created for any airline, travel company, booking platform, or commercial organization.
+It is not affiliated with, endorsed by, or created for any airline, travel company, booking platform, payment provider, or commercial organization.
