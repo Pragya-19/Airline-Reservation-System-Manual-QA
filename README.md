@@ -208,6 +208,7 @@ Fare consistency across the booking journey
 The RTM maps the complete QA chain:
 
 flowchart LR
+
     R[Requirement] --> S[Test Scenario]
     S --> T[Test Case]
     T --> E[Execution Result]
@@ -252,21 +253,18 @@ Airline-Reservation-System-Manual-QA/
 
 │   └── RTM.xlsx
 │
-
 ├── defects/
 
 │   └── Defect_Report.xlsx
-
 │
-
 ├── reports/
+
 │   ├── Test_Summary_Report.pdf
 
 │   └── Project_Closure_Report.pdf
 │
 
 └── evidence/
-
     └── screenshots/
 
 🛠️ **Tools Used**
