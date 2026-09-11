@@ -253,10 +253,12 @@ Airline-Reservation-System-Manual-QA/
 
 │   └── RTM.xlsx
 │
+
 ├── defects/
 
 │   └── Defect_Report.xlsx
 │
+
 ├── reports/
 
 │   ├── Test_Summary_Report.pdf
@@ -265,6 +267,7 @@ Airline-Reservation-System-Manual-QA/
 │
 
 └── evidence/
+
     └── screenshots/
 
 🛠️ **Tools Used**
