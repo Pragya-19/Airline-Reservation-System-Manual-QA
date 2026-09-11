@@ -11,7 +11,7 @@
   <strong>End-to-end manual QA project covering flight search, fare validation, passenger rules, payments, booking/PNR, cancellation, refund, traceability, defects, and test closure.</strong>
 </p>
 
-📌 Project Overview
+📌 **Project Overview**
 
 This repository presents an independent Manual QA portfolio project for an airline/travel reservation workflow.
 
@@ -39,7 +39,7 @@ Test summary and project closure
 
 The System Under Test (SUT) is a public travel reservation demo application used only for testing and learning purposes.
 
-📊 Project Snapshot
+📊 **Project Snapshot**
 
 Metric
 
@@ -79,7 +79,7 @@ Closed with documented defects and test limitations
 
 Execution integrity: Scenarios that could not be reproduced safely or deterministically were marked Blocked or Not Executed rather than being reported as passed.
 
-🧭 End-to-End Booking Flow
+🧭 **End-to-End Booking Flow**
 
 flowchart LR
     A[Flight Search] --> B[Availability]
@@ -96,7 +96,7 @@ flowchart LR
     G -. Integration Risk .-> L[Supplier / PNR Failure Handling]
     J -. Business Risk .-> M[Refund Validation]
 
-✅ Functional Coverage
+✅ **Functional Coverage**
 
 Module
 
@@ -134,7 +134,7 @@ End-to-End
 
 Search → booking → payment → confirmation and fare consistency
 
-🧪 Test Techniques Applied
+🧪 **Test Techniques Applied**
 
 <p>
   <img src="https://img.shields.io/badge/Positive-Testing-0EA5E9" alt="Positive Testing"/>
@@ -159,7 +159,7 @@ Integration-focused scenario design
 
 Requirement traceability
 
-🐞 Representative Defects Identified
+🐞 **Representative Defects Identified**
 
 DEF-FS-001 — Same origin and destination accepted
 
@@ -179,7 +179,7 @@ A cancellation request could not be completed because the Admin portal returned 
 
 A payment gateway limit issue was also observed earlier and successfully retested later using Stripe Sandbox.
 
-⚠️ High-Risk Areas Covered
+⚠️ **High-Risk Areas Covered**
 
 The project gives additional attention to business-critical scenarios such as:
 
@@ -203,7 +203,7 @@ Refund calculation
 
 Fare consistency across the booking journey
 
-🔗 Requirement Traceability
+🔗 **Requirement Traceability**
 
 The RTM maps the complete QA chain:
 
@@ -227,40 +227,49 @@ Defect linkage
 
 Known coverage gaps
 
-📂 Repository Artifacts
+📂 **Repository Artifacts**
 
 Airline-Reservation-System-Manual-QA/
 │
+
 ├── README.md
 │
+
 ├── docs/
+
 │   ├── Requirements.md
+
 │   ├── Test_Plan.md
+
 │   └── Domain_Overview.md
 │
+
 ├── test-design/
+
 │   ├── Test_Scenarios.md
+
 │   ├── Test_Cases.xlsx
+
 │   └── RTM.xlsx
 │
+
 ├── defects/
+
 │   └── Defect_Report.xlsx
+
 │
-├── exploratory-testing/
-│   └── Exploratory_Testing.md
-│
-├── agile/
-│   ├── User_Stories.md
-│   └── Sprint_Backlog.md
-│
+
 ├── reports/
 │   ├── Test_Summary_Report.pdf
+
 │   └── Project_Closure_Report.pdf
 │
+
 └── evidence/
+
     └── screenshots/
 
-🛠️ Tools Used
+🛠️ **Tools Used**
 
 Area
 
@@ -286,11 +295,11 @@ Evidence
 
 Screenshots and execution documentation
 
-✈️ Airline / Travel Domain Concepts Applied
+✈️ **Airline / Travel Domain Concepts Applied**
 
 PNR · PAX · Itinerary · Flight Segment · Fare Class · GDS / Supplier Integration · Booking Confirmation · Payment Reconciliation · Cancellation · Refund · Idempotency
 
-🚧 Project Constraints
+🚧 **Project Constraints**
 
 Because the project uses a public demo application, some conditions were outside the tester's control, including:
 
@@ -306,7 +315,7 @@ Limited control over supplier-side PNR issuance
 
 These limitations are explicitly documented in the test cases, RTM, defect report, and test summary.
 
-📈 Future Enhancements
+📈 **Future Enhancements**
 
 Potential extensions:
 
@@ -322,7 +331,7 @@ GitHub Actions CI/CD
 
 Basic AI/LLM testing for an airline support chatbot
 
-📄 Disclaimer
+📄 **Disclaimer**
 
 This is an independent educational and QA portfolio project.
 
